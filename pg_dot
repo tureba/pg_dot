@@ -11,8 +11,8 @@ function pg() {
 	echo 'node [shape = record fontsize = "10"];'
 	for namespace in 2200; do
 		for t in $(pg "select relname from pg_class where relnamespace = $namespace and relkind = 'r'"); do
-			echo -n "$t [shape = record label = \"$t|"
-			X=( $(pg "select distinct '<' || attname || '>' || attname || ' ' || typname || '|' from pg_class join pg_attribute on attrelid = pg_class.oid join pg_type on atttypid = pg_type.oid where relname = '$t' and attnum > 0") )
+			echo -n "$t [shape = record label = \"\\N"
+			X=( $(pg "select distinct ' | <' || attname || '>' || attname || ' ' || typname from pg_class join pg_attribute on attrelid = pg_class.oid join pg_type on atttypid = pg_type.oid where relname = '$t' and attnum > 0") )
 			echo -n ${X[*]}
 			echo "\"];"
 		done
