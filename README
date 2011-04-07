@@ -8,9 +8,20 @@
     This script is similar to the famous postgresql_autodoc script, but
     generates output only for graphviz. Also unlike postgresql_autodoc,
     pg_dot handles table hierarchy and will soon support unnormalized
-    attributes, weak relationships and anything else I can implement.
+    attributes, weak relationships, schemas and anything else I can
+    implement.
 
-      Arthur Nascimento
+    How to use:
+        1 - Make sure the environment variables that PostgreSQL uses are
+            defined and pointing to the correct server and database. The
+            variables are PGHOST, PGPORT, PGUSER and PGDATABASE;
+        2 - Make sure you have read access to the database. If it uses a
+            password authentication, then set up a ~/.pgpass file adequately;
+        3 - Execute the pg_dot script and it should result in a png file
+            that describes the database diagram. The name of the file will be
+            the name of the database consulted.
+
+                                                 Arthur Nascimento
 
 ================================================================================
     pg_dot: database diagram reverse engineered from PostgreSQL system tables
