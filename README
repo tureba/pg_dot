@@ -1,15 +1,32 @@
-pg_dot: database diagram reverse engineered from PostgreSQL system tables
-Copyright (C) 2011 Arthur Nascimento <tureba@gmail.com>
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+    pg_dot is a script that reverse engineers the database diagram from
+    PostgreSQL system tables. It tries to generate a diagram as similar as
+    possible to the intended Entity-Relationship Model used, including
+    generalizations/specializations, unnormalized attributes and other
+    abstractions that are hidden inside the database.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+    This script is similar to the famous postgresql_autodoc script, but
+    generates output only for graphviz. Also unlike postgresql_autodoc,
+    pg_dot handles table hierarchy and will soon support unnormalized
+    attributes, weak relationships and anything else I can implement.
 
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>
+      Arthur Nascimento
+
+================================================================================
+    pg_dot: database diagram reverse engineered from PostgreSQL system tables
+    Copyright (C) 2011 Arthur Nascimento <tureba@gmail.com>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>
+================================================================================
+
